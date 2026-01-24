@@ -11,8 +11,8 @@ function isValidHex(str){
     if (typeof str !== "string") return false;
 
     // 2. 正则返回
-    const pattern = "^#([0-9a-fA-F]{3}|[a-fA-F0-9]{6})$"
-    return pattern.test(s);
+    const pattern = /^#([0-9a-fA-F]{3}|[a-fA-F0-9]{6})$/
+    return pattern.test(str);
 }
 
-console.log("#331");
+console.log(isValidHex("#331"));
