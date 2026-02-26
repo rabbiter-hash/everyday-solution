@@ -188,3 +188,12 @@ function mirrorStand(str) {
 
 #### 3.2.5、reduce
 
+```js
+function mirrorReduce(str) {
+    // 利用reduce将字符往前放
+    return str + str.split("").reduce(
+        (acc, ch) => ch + acc
+    , "");
+}
+```
+
