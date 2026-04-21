@@ -112,5 +112,11 @@ getOddWords("This is a super good test")
 ### 4.2、一句话版本
 
 ```js
+function getOddWordsOne(s){
+    return s
+        .split(/\s+/g)
+        .filter(word => word.length % 2 !== 0)
+        .join(" ");
+}
 ```
 
