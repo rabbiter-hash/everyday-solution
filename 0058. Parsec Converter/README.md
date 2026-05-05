@@ -34,5 +34,32 @@ Return the converted value as an integer.
 
 ## 三、Python Solution(s)
 
+```python
+def convert_parsecs(parsecs):
+    # 1. 判定数据的合法性
+    if not isinstance(parsecs, int):
+        raise TypeError("parsecs must be a number")
+
+    # 2. 直接返回
+    # return parsecs * 3 if parsecs % 2 == 0 else parsecs * 2
+
+    # 更简洁
+    return parsecs * (3 if parsecs % 2 == 0 else 2)
+```
+
 ## 四、JavaScript Solution(s)
+
+```js
+function convertParsecs(parsecs){
+    // 1. 判定数据输入的合法性
+    if(!Number.isInteger(parsecs)){
+        throw new Error("输入必须是整数！");
+    }
+
+    // 2. 返回
+    return parsecs % 2 === 0 ? parsecs * (6 / 2) : parsecs * 2;
+    // 更简洁
+    // return parsecs * (parsecs % 2 === 0 ? 3 : 2);
+}
+```
 
