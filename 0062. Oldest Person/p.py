@@ -40,4 +40,5 @@ def get_oldest_person_pythonic(people):
     # 找到最大年龄
     max_age = max(person['age'] for person in people)
     return [person['name'] for person in people if person['age'] == max_age]
+
 print(get_oldest_person_pythonic([{ "name": "George", "age": 50 }, { "name": "Shirley", "age": 42 }, { "name": "Beth", "age": 48 }, { "name": "Holly", "age": 50 }, { "name": "Kevin", "age": 44 }, { "name": "Frank", "age": 47 }, { "name": "Zach", "age": 50 }, { "name": "Jennifer", "age": 43 }]))
