@@ -26,9 +26,9 @@ function getMood(genre, bpm){
     }
 
     // 3. 遍历规则
-    for(let rule of moodMap){
+    for(let rule of moodMap[genre]){
         // 开始判定
-        if(bmp >= rule.low && bmp <= rule.high) {
+        if(bpm >= rule.low && bpm <= rule.high) {
             return rule.mood;
         }
     }
